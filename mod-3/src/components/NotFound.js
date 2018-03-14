@@ -4,7 +4,7 @@ class NotFound extends Component {
   render() {
     return (
       <div>
-        <img src="/404.gif" />
+        <img src="/404.gif" alt="Not found" />
       </div>
     );
   }

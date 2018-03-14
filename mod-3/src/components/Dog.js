@@ -5,7 +5,7 @@ class Dog extends Component {
     return (
       <div>
         <h2>Dog</h2>
-        <img src="/dog.png" />
+        <img src="/dog.png" alt="Dog" />
       </div>
     );
   }
