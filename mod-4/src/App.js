@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import AppPresentation from './components/AppPresentation';
+// import AppPresentation from './components/AppPresentation';
+import { AppPresentation } from './components';
 
 class AppContainer extends Component {
   state = { person: { firstName: 'Maurice' } };
@@ -13,11 +14,9 @@ class AppContainer extends Component {
   };
 
   render() {
-    const { person} = this.state;
+    const { person } = this.state;
 
-    return (
-      <AppPresentation person={person} onChange={this.changeFirstName} />
-    );
+    return <AppPresentation person={person} onChange={this.changeFirstName} />;
   }
 }
 
