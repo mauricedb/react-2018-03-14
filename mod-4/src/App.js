@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import AppPresentation from './components/AppPresentation';
 
-class App extends Component {
+class AppContainer extends Component {
+  state = { person: { firstName: 'Maurice' } };
+
+  changeFirstName = firstName => {
+    const person = { ...this.state.person, firstName };
+    // const { person } = this.state;
+    // person.firstName = firstName;
+    this.setState({ person });
+  };
+
   render() {
+    const { person} = this.state;
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <AppPresentation person={person} onChange={this.changeFirstName} />
     );
   }
 }
 
-export default App;
+export default AppContainer;
