@@ -4,9 +4,13 @@ import MoviesPresentation from './MoviesPresentation';
 class MoviesContainer extends Component {
   state = { movies: [] };
   async componentDidMount() {
-    const rsp = await fetch('/movies.json');
-    const movies = await rsp.json();
-    this.setState({ movies });
+    const reactSnap = navigator.userAgent === 'ReactSnap';
+
+    if (!reactSnap) {
+      const rsp = await fetch('/movies.json');
+      const movies = await rsp.json();
+      this.setState({ movies });
+    }
   }
   deleteMovie = movie => {
     const movies = this.state.movies.filter(m => m !== movie);
@@ -15,7 +19,7 @@ class MoviesContainer extends Component {
 
   render() {
     const { movies } = this.state;
-    console.log('MoviesContainer render')
+    console.log('MoviesContainer render');
 
     return (
       <MoviesPresentation movies={movies} deleteMovie={this.deleteMovie} />
