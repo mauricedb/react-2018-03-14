@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`People validation An unnamed person should match its snapshot 1`] = `
+Array [
+  "Voornaam is verplicht!",
+  "Voornaam is te kort!",
+]
+`;
+
+exports[`People validation An valid person should match its snapshot 1`] = `Array []`;
