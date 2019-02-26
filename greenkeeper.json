@@ -1,0 +1,18 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "mod-1/demo1/package.json",
+        "mod-2/js-demo/package.json",
+        "mod-2/lint/package.json",
+        "mod-2/ts-demo/package.json",
+        "mod-3/package.json",
+        "mod-4/package.json",
+        "mod-6/package.json",
+        "mod-7/package.json",
+        "mod-8/package.json",
+        "mod-9/package.json"
+      ]
+    }
+  }
+}
